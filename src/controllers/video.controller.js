@@ -9,7 +9,7 @@ import { uploadOnCloudinary } from "../utils/cloudinary.js";
 const getAllVideos = asyncHandler(async (req, res) => {
   const { page = 1, limit = 10, query, sortBy, sortType, userId } = req.query;
 
-  console.log(query);
+  // console.log(query);
   const pipeline = [];
 
   if (query) {
@@ -94,7 +94,7 @@ const publishAVideo = asyncHandler(async (req, res) => {
 
   // TODO: get video, upload to cloudinary, create video
 
-  console.log(req.files);
+  // console.log(req.files);
 
   const videoLocalPath = req.files.videoFile[0]?.path;
 
@@ -283,7 +283,7 @@ const updateVideoDetails = asyncHandler(async (req, res) => {
   );
 
   if (!video) {
-    console.log(404, "Either video is unavailable or update is not done");
+    // console.log(404, "Either video is unavailable or update is not done");
   }
 
   return res

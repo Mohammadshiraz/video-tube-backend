@@ -10,7 +10,7 @@ cloudinary.config({
 const uploadOnCloudinary = async (localFilePath) => {
   try {
     if (!localFilePath) {
-      console.log("Invalid file path");
+      // console.log("Invalid file path");
       return;
     }
 
@@ -18,8 +18,8 @@ const uploadOnCloudinary = async (localFilePath) => {
       localFilePath,
       { resource_type: "auto" },
       function (error, result) {
-        if (error) console.log(error);
-        else console.log(result);
+        // if (error) console.log(error);
+        // else console.log(result);
       }
     );
 

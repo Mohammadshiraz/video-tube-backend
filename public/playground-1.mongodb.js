@@ -73,7 +73,7 @@ const salesOnApril4th = db
   .count();
 
 // Print a message to the output window.
-console.log(`${salesOnApril4th} sales occurred in 2014.`);
+// console.log(`${salesOnApril4th} sales occurred in 2014.`);
 
 // Here we run an aggregation and open a cursor to the results.
 // Use '.toArray()' to exhaust the cursor to return the whole result set.

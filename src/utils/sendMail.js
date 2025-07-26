@@ -24,12 +24,12 @@ const sendMail = async (data) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log(error);
+        // console.log(error);
       }
-      console.log(info.messageId);
+      // console.log(info.messageId);
     });
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
   }
 };
 

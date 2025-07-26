@@ -58,7 +58,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   //get files from frontend .files is added by multer middleware
   const avatarLocalPath = req.files?.avatar[0]?.path;
-  console.log(avatarLocalPath);
+  // console.log(avatarLocalPath);
   // const coverImageLocalPath = req.files?.coverImage[0]?.path;
   let coverImageLocalPath;
   if (
@@ -76,7 +76,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   const avatar = await uploadOnCloudinary(avatarLocalPath);
   const coverImage = await uploadOnCloudinary(coverImageLocalPath);
-  console.log(avatar);
+  // console.log(avatar);
 
   if (!avatar) {
     throw new ApiError(400, "Avatar file is required");
@@ -115,7 +115,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
 const loginUser = asyncHandler(async (req, res) => {
   const { username, email, password } = req.body;
-  console.log(username, email);
+  // console.log(username, email);
   if (!username && !email) {
     throw new ApiError(400, "Username or email is required");
   }
@@ -208,7 +208,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
     }
 
     const user = await User.findById(decodedToken._id);
-    console.log(user);
+    // console.log(user);
 
     if (incomingRefreshToken !== user?.refreshToken) {
       throw new ApiError(400, "Refresh token is expired or used");
