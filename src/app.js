@@ -7,7 +7,7 @@ import passport from "passport";
 
 app.use(
   cors({
-    origin: true, // Reflect the request origin
+    origin: process.env.CORS_ORIGIN, // Reflect the request origin
     credentials: true,
   })
 );
