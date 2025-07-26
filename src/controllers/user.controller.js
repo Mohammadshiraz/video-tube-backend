@@ -103,7 +103,7 @@ const registerUser = asyncHandler(async (req, res) => {
     email: email,
     subject: "Verification email",
     content: `<p>Hii ${fullName}.<br />
-      Please click <a href="https://play-app-backend-eaag.onrender.com/api/v1/auth/verify-mail?id=${user._id}">here</a> to verify your email.
+      Please click <a href="https://video-tube-backend-b0la.onrender.com/api/v1/auth/verify-mail?id=${user._id}">here</a> to verify your email.
     </p>`,
   };
   const message = await sendMail(mailData);
@@ -488,7 +488,7 @@ const deliverMail = asyncHandler(async (req, res) => {
       email: email,
       subject: "Verification email",
       content: `<p>Hii ${fullName}.<br />
-      Please click <a href="https://play-app-backend-eaag.onrender.com/api/v1/auth/verify-mail?id=${id}">here</a> to verify your email.
+      Please click <a href="https://video-tube-backend-b0la.onrender.com/api/v1/auth/verify-mail?id=${id}">here</a> to verify your email.
     </p>`,
     };
     const message = await sendMail(mailData);
